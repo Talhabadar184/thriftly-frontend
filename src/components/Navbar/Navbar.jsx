@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaCartShopping } from 'react-icons/fa6';
 import { IoMdSearch } from 'react-icons/io';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import logo1 from '../Navbar/logo1.png'
 
 const Menu = [
   { id: 1, name: 'Home', link: '/#' },
@@ -19,10 +20,11 @@ const Navbar = ({ handleOrderPopup }) => {
       <div className="py-4 bg-black">
         <div className="container flex items-center justify-between">
           {/* Logo */}
-          <div>
-            <a href="#" className="flex gap-2 text-2xl text-white font-bold cms:text-3xl">
-              Shopfy
-            </a>
+          <div >
+            <img className= "h-10 rounded-md bg-green-500" src={logo1} alt="Thriftly Logo"  />
+            {/* <a href="#" className="flex gap-2 p-1 bg-green-800 rounded-md text-2xl text-white font-bold cms:text-3xl">
+            
+            </a> */}
           </div>
 
           {/* Hamburger Icon for Small Screens */}
@@ -47,7 +49,7 @@ const Navbar = ({ handleOrderPopup }) => {
                 <li key={data.id}>
                   <a
                     href={data.link}
-                    className="inline-block px-4 duration-200 hover:text-xl"
+                    className="inline-block  px-4 duration-200 hover:text-xl hover:underline"
                     onClick={() => setIsMenuOpen(false)} // Close menu on link click
                   >
                     {data.name}
@@ -58,16 +60,8 @@ const Navbar = ({ handleOrderPopup }) => {
           </div>
 
           <div className="hidden sm:flex items-center gap-4">
-            {/* Search Bar */}
-            <div className="relative hidden sm:block group">
-              {/* Input Field */}
-              <input
-                type="text"
-                className="w-[40px] transition-all duration-300 ease-in-out group-hover:w-[200px] rounded-full px-2 py-1 focus:w-[200px] focus:border-blue/300"
-              />
-              {/* Search Icon */}
-              <IoMdSearch className="absolute text-black -translate-y-1/2 top-1/2 right-3 transition-all duration-300 ease-in-out group-hover:text-black" />
-            </div>
+           
+
             {/* Order Button */}
             <button
               onClick={() => handleOrderPopup()}
@@ -76,7 +70,7 @@ const Navbar = ({ handleOrderPopup }) => {
               <span className="hidden color transition-all duration-200 group-hover:block">
                 Order
               </span>
-              <FaCartShopping className="text-xl text-white cursor-pointer drop-shadow-sm" />
+              <FaCartShopping className="text-xl text-white hover:scale-125 cursor-pointer drop-shadow-sm" />
             </button>
           </div>
         </div>
