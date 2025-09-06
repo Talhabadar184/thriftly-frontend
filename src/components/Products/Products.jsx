@@ -36,7 +36,7 @@ setProducts(Array.isArray(data) ? data : []);
         {/* Section Heading */}
         <div className="flex justify-center mb-10">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-green-500 to-blue-500 bg-clip-text text-transparent">
-            Products
+            Wardrobe 
           </h1>
         </div>
 
@@ -49,10 +49,11 @@ setProducts(Array.isArray(data) ? data : []);
             >
               {/* Product Image */}
               <img
-                src={product.imageUrl || "https://via.placeholder.com/400"} // fallback img
-                alt={product.name}
-                className="w-full h-60 object-cover"
-              />
+  src={product.picture || "https://via.placeholder.com/400"}
+  alt={product.name}
+  className="w-full h-60 object-cover"
+/>
+
 
               {/* Product Details */}
               <div className="p-5">
