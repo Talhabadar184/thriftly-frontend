@@ -31,13 +31,14 @@ function App() {
    <BrowserRouter>
         <RouterRoutes>
           {/* Redirect the root path to the Landing Page initially */}
-          <Route path="/" element={<Navigate to="/Home" replace />} />
+          <Route path="/" element={<Navigate to="/Hero" replace />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Forgotpassword" element={<Forgotpassword />} />
           <Route path="/Verifycode" element={<Verifycode />} />
           <Route path="/Resetpassword" element={<Resetpassword />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Home" element={<Home />} />
+          <Route path="/Hero" element={<Hero />} />
           <Route path="/Products" element={<Products />} />
         </RouterRoutes>
       </BrowserRouter>

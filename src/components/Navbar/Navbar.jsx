@@ -5,13 +5,12 @@ import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import logo1 from '../Navbar/logo1.png'
 
 const Menu = [
-  { id: 1, name: 'Home', link: '/#' },
-  { id: 2, name: 'About', link: '/#' },
-  { id: 3, name: 'Products', link: '/#' },
-  { id: 4, name: 'Contact us', link: '/#' },
+  { id: 1, name: 'Home/About', link: '/#' },
+  { id: 2, name: 'Wardrobe', link: '/#' },
+  { id: 3, name: 'Get in touch?', link: '/#' },
 ];
 
-const Navbar = ({ handleOrderPopup }) => {
+  const Navbar = ({ handleOrderPopup }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (

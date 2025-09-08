@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion"; // ✅ Import framer-motion
 // import Banner from '../../assets/Products/blackpattern.png';
-import { FiArrowDown, FiCode, FiZap } from "react-icons/fi";
+import { FiArrowRight, FiCode, FiZap } from "react-icons/fi";
 import { FaBrain, FaCogs } from "react-icons/fa";
 
 const ImageList = [
@@ -78,17 +78,17 @@ const Hero = ({ handleOrderPopup }) => {
               not just a store, but a movement toward conscious consumerism in Pakistan.
             </motion.div>
 
-            <button
+            {/* <button
               onClick={handleOrderPopup}
               className="mt-8 px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium hover:scale-105 transition-transform duration-200"
             >
               Shop Now
-            </button>
+            </button> */}
 
           </div>
 
           {/* Right Side: Image Slider */}
-          <div className="flex-1 w-full max-w-lg">
+          <div className="flex-1 w-[10%] max-w-lg">
             <Slider {...sliderSettings}>
               {ImageList.map((item) => (
                 <div key={item.id} className="flex justify-center">
@@ -125,7 +125,7 @@ const Hero = ({ handleOrderPopup }) => {
           {/* Button Content */}
           <div className="relative flex items-center gap-2 sm:gap-3">
             <span>Explore the Thrift World</span>
-            <FiArrowDown className="group-hover:translate-y-1 transition-transform duration-300" />
+            <FiArrowRight className="group-hover:translate-y-1 transition-transform duration-300" />
           </div>
 
           {/* Shine Effect */}

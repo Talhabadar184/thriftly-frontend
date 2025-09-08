@@ -49,12 +49,10 @@ setProducts(Array.isArray(data) ? data : []);
             >
               {/* Product Image */}
               <img
-  src={product.picture || "https://via.placeholder.com/400"}
-  alt={product.name}
-  className="w-full h-60 object-cover"
-/>
-
-
+              src={product.picture || "https://via.placeholder.com/400"}
+              alt={product.name}
+              className="w-full h-60 object-cover"
+              />
               {/* Product Details */}
               <div className="p-5">
                 <h2 className="text-xl font-semibold text-white mb-2">
