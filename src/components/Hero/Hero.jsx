@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Image1 from "../../assets/Hero/1.png";
 import Image2 from "../../assets/hero/2.png";
@@ -10,6 +11,7 @@ import { motion } from "framer-motion"; // ✅ Import framer-motion
 // import Banner from '../../assets/Products/blackpattern.png';
 import { FiArrowRight, FiCode, FiZap } from "react-icons/fi";
 import { FaBrain, FaCogs } from "react-icons/fa";
+import Footer from "../Footer/Footer";
 
 const ImageList = [
   {
@@ -42,12 +44,7 @@ const Hero = ({ handleOrderPopup }) => {
     pauseOnHover: false,
   };
 
-  const scrollToAbout = useCallback(() => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
+
 
   return (
     <div>
@@ -57,7 +54,7 @@ const Hero = ({ handleOrderPopup }) => {
         <div className="container relative flex flex-col lg:flex-row items-center justify-between gap-10">
 
           {/* Left Side: Text with Scroll-Up Animation */}
-          <div className="flex-1 text-center lg:text-left px-6 lg:px-12">
+          <div className="flex-1 text-center lg:text-left ">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-green-500 to-blue-500 bg-clip-text text-transparent">
               Thriftly
             </h1>
@@ -66,7 +63,7 @@ const Hero = ({ handleOrderPopup }) => {
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: "0%", opacity: 1 }}
               transition={{ duration: 2, ease: "easeOut" }}
-              className="mt-6 italic text-lg sm:text-xl leading-relaxed"
+              className="mt-6 w-[100%] italic text-lg sm:text-xl leading-relaxed"
             >
               Thriftly is Pakistan’s first dedicated online thrift store, designed to make
               sustainable fashion accessible and affordable. It offers a wide range of
@@ -88,7 +85,7 @@ const Hero = ({ handleOrderPopup }) => {
           </div>
 
           {/* Right Side: Image Slider */}
-          <div className="flex-1 w-[10%] max-w-lg">
+          <div className="flex-1 w-[1%] max-w-lg">
             <Slider {...sliderSettings}>
               {ImageList.map((item) => (
                 <div key={item.id} className="flex justify-center">
@@ -108,11 +105,12 @@ const Hero = ({ handleOrderPopup }) => {
         
       </div>
       <div className="flex bg-black justify-center ">
-
               {/* CTA Button */}
+              <Link to="/products">
         <motion.button
-          onClick={scrollToAbout}
-          className="group relative px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+          // onClick={scrollToAbout}
+          
+          className="group relative mb-5 px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 text-lg sm:text-xl font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
@@ -131,7 +129,10 @@ const Hero = ({ handleOrderPopup }) => {
           {/* Shine Effect */}
           <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
         </motion.button>
+        </Link>
           </div>
+
+          <Footer/>
     </div>
   );
 };

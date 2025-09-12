@@ -11,6 +11,8 @@ import Home from "./Landingpage/Home"
 import Forgotpassword from "./components/Login/Forgotpassword"
 import Verifycode from "./components/Login/Verifycode"
 import Resetpassword from "./components/Login/Resetpassword"
+import Footer from './components/Footer/Footer';
+import Contact from './components/Contact/Contact';
 
 import { BrowserRouter, Route, Routes as RouterRoutes, Navigate } from "react-router-dom";
 
@@ -40,6 +42,7 @@ function App() {
           <Route path="/Home" element={<Home />} />
           <Route path="/Hero" element={<Hero />} />
           <Route path="/Products" element={<Products />} />
+          <Route path="/Contact" element={<Contact />} />
         </RouterRoutes>
       </BrowserRouter>
   )

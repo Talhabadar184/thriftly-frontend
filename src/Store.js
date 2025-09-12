@@ -6,7 +6,7 @@ import { combineReducers } from "redux";
 
 // import authReducer from "./Features/authSlice";
 import productReducer from "./Features/producSlice";
-// import cartReducer from "./Features/cartSlice";
+import cartReducer from "./Features/cartSlice";
 // import orderReducer from "./Features/orderSlice";
 // import wishlistReducer from "./Features/wishlistSlice";
 //  import userReducer from "./Features/userSlice";
@@ -15,7 +15,7 @@ import productReducer from "./Features/producSlice";
 const rootReducer = combineReducers({
   // auth: authReducer,
   products: productReducer,
-//   cart: cartReducer,
+  cart: cartReducer,
 //   orders: orderReducer,
 //   wishlist: wishlistReducer,
   //  user: userReducer,

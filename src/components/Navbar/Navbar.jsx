@@ -6,15 +6,15 @@ import logo1 from '../Navbar/logo1.png'
 
 const Menu = [
   { id: 1, name: 'Home/About', link: '/#' },
-  { id: 2, name: 'Wardrobe', link: '/#' },
-  { id: 3, name: 'Get in touch?', link: '/#' },
+  { id: 2, name: 'Wardrobe', link: '/products' },
+  { id: 3, name: 'Get in touch?', link: '/Contact' },
 ];
 
   const Navbar = ({ handleOrderPopup }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 z-50 duration-200 bg-white shadow-md dark:bg-gray-900 dark:text-white">
+    <div className="sticky top-0 z-50 duration-200 bg-white shadow-md dark:bg-gray-500 dark:text-white">
       {/* Upper Navbar */}
       <div className="py-4 bg-black">
         <div className="container flex items-center justify-between">
