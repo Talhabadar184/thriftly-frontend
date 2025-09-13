@@ -85,7 +85,7 @@ const Hero = ({ handleOrderPopup }) => {
           </div>
 
           {/* Right Side: Image Slider */}
-          <div className="flex-1 w-[1%] max-w-lg">
+          <div className="flex-1 w-[50%] max-w-lg">
             <Slider {...sliderSettings}>
               {ImageList.map((item) => (
                 <div key={item.id} className="flex justify-center">

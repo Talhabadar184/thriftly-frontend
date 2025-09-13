@@ -13,6 +13,7 @@ import Verifycode from "./components/Login/Verifycode"
 import Resetpassword from "./components/Login/Resetpassword"
 import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
+import ProductDetail from './components/Products/ProductDetail';
 
 import { BrowserRouter, Route, Routes as RouterRoutes, Navigate } from "react-router-dom";
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="/Home" element={<Home />} />
           <Route path="/Hero" element={<Hero />} />
           <Route path="/Products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetail />} /> {/* ✅ */}
           <Route path="/Contact" element={<Contact />} />
         </RouterRoutes>
       </BrowserRouter>

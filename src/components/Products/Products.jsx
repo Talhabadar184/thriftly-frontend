@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -67,9 +68,11 @@ function Products() {
                   </p>
 
                   {/* Button */}
+                  <Link to={`/products/${product.id}`}>
                   <button className="w-full bg-gradient-to-r from-blue-500 to-green-500 text-black font-bold py-2 px-4 rounded-lg hover:opacity-90 transition">
                     View More
                   </button>
+                  </Link>
                 </div>
               </div>
             ))}
