@@ -2,10 +2,16 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
+import Cart from "../Cart/Cart";
 
 function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const openCart = () => setIsCartOpen(true);
+  const closeCart = () => setIsCartOpen(false);
 
   // Fetch products from backend
   useEffect(() => {
@@ -35,8 +41,11 @@ function Products() {
 
   return (
     <div>
-      <Navbar />
-      <div className="mb-20 text-white bg-black">
+ <Navbar handleOrderPopup={openCart} />   
+
+       <Cart isOpen={isCartOpen} onClose={closeCart} />
+   
+ <div className="mb-20 text-white bg-black">
         <div className="container mx-auto py-10 backdrop-blur-sm">
           {/* Section Heading */}
           <div className="flex justify-center mb-10">

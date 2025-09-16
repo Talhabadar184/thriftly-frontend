@@ -4,13 +4,19 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../Features/cartSlice"; 
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import Cart from "../Cart/Cart";
 
 function ProductDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [quantity, setQuantity] = useState(1); // for + and - buttons
+  const [quantity, setQuantity] = useState(1);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [message, setMessage] = useState(""); // ✅ state for message
   const dispatch = useDispatch();
+
+  const openCart = () => setIsCartOpen(true);
+  const closeCart = () => setIsCartOpen(false);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -45,12 +51,28 @@ function ProductDetails() {
 
   // Handle add to cart with quantity
   const handleAddToCart = () => {
-    dispatch(addToCart({ ...product, quantity }));
+    dispatch(
+      addToCart({
+        id: product.id, // or _id depending on backend
+        name: product.name,
+        price: product.price,
+        image: product.picture,
+        qty: quantity,
+      })
+    );
+
+    // ✅ Show message
+    setMessage(`${product.name} added to cart`);
+    setTimeout(() => setMessage(""), 2000); // hide after 2s
   };
 
   return (
     <div className="bg-black text-white min-h-screen">
-      <Navbar />
+      <Navbar handleOrderPopup={openCart} />
+
+      {/* Cart Drawer */}
+      <Cart isOpen={isCartOpen} onClose={closeCart} />
+
       <div className="container mx-auto py-10 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Product Image */}
@@ -96,6 +118,11 @@ function ProductDetails() {
             >
               Add to Cart
             </button>
+
+            {/* ✅ Message Prompt */}
+            {message && (
+              <p className="mt-4 text-green-400 font-semibold">{message}</p>
+            )}
           </div>
         </div>
       </div>
