@@ -33,7 +33,7 @@ function Cart({ isOpen, onClose }) {
             >
               {/* Image */}
               <img
-                src={item.picture || "https://via.placeholder.com/50"}
+                src={item.image || "https://via.placeholder.com/50"}
                 alt={item.name}
                 className="w-12 h-12 object-cover rounded"
               />
