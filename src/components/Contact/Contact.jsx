@@ -3,6 +3,7 @@ import { FiMapPin, FiMail, FiPhone, FiSend, FiUser, FiMessageSquare, FiTarget } 
 import { FaRocket, FaBrain, FaCode } from "react-icons/fa";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import Cart from "../Cart/Cart";
 // import emailjs from "emailjs-com";
 
 const contactInfo = [
@@ -41,6 +42,10 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState(null);
   const formRef = useRef(null);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  
+    const openCart = () => setIsCartOpen(true);
+    const closeCart = () => setIsCartOpen(false);
 
   const handleChange = useCallback((e) => {
     const { name, value } = e.target;
@@ -102,7 +107,8 @@ const Contact = () => {
 
   return (
     <>
-        <Navbar />
+       <Navbar handleOrderPopup={openCart} />
+      <Cart isOpen={isCartOpen} onClose={closeCart} />
     
     <section id="contact" className="relative py-20 overflow-hidden bg-black" 
     >

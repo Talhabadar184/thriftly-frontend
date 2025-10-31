@@ -60,8 +60,7 @@ const Hero = () => {
               transition={{ duration: 2, ease: "easeOut" }}
               className="mt-6 italic text-lg sm:text-xl leading-relaxed"
             >
-              Thriftly is Pakistan’s first dedicated online thrift store, designed
-              to make sustainable fashion accessible and affordable...
+              Thriftly is Pakistan’s first dedicated online thrift store, designed to make sustainable fashion accessible and affordable for everyone. It provides a platform where individuals can buy and sell pre-loved clothing, giving garments a second life and reducing waste in the fashion industry. Thriftly promotes conscious consumption by encouraging people to choose quality, affordability, and environmental responsibility over fast fashion trends. With a wide range of stylish, gently-used items available at reasonable prices, Thriftly aims to create a community that values both sustainability and style—making it easier than ever to look good while doing good for the planet.
             </motion.div>
           </div>
 
