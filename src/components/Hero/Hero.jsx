@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-import Image1 from "../../assets/Hero/1.png";
+// import Image1 from "../../assets/Hero/1.png";
+// // import Image2 from "../../assets/Hero/2.png";
 // import Image2 from "../../assets/Hero/2.png";
-import Image2 from "../../assets/Hero/2.png";
-import Image3 from "../../assets/hero/3.png";
+// import Image3 from "../../assets/Hero/3.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,10 +14,11 @@ import Footer from "../Footer/Footer";
 import Cart from "../Cart/Cart";
 
 const ImageList = [
-  { id: 1, img: Image1 },
-  { id: 2, img: Image2 },
-  { id: 3, img: Image3 },
+  { id: 1, img: "/assets/Hero/1.png" },
+  { id: 2, img: "/assets/Hero/2.png" },
+  { id: 3, img: "/assets/Hero/3.png" },
 ];
+
 
 const Hero = () => {
   const sliderSettings = {
