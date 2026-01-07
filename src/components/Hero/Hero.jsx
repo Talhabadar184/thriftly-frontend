@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-// import Image1 from "../../assets/Hero/1.png";
+// import Image1 from "../../../public/assets/hero/1.png"
 // // import Image2 from "../../assets/Hero/2.png";
-// import Image2 from "../../assets/Hero/2.png";
-// import Image3 from "../../assets/Hero/3.png";
+// import Image2 from "../../../public/assets/hero/2.png"
+// import Image3 from "../../../public/assets/hero/3.png"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
