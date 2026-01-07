@@ -2,7 +2,12 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "headers": { "cache-control": "max-age=0" },
+      "dest": "/index.html",
+      "continue": true
+    },
+    {
+      "handle": "filesystem"
     }
   ]
 }
