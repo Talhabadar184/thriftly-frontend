@@ -14,9 +14,9 @@ import Footer from "../Footer/Footer";
 import Cart from "../Cart/Cart";
 
 const ImageList = [
-  { id: 1, img: "/assets/hero/1.png" },
-  { id: 2, img: "/assets/hero/2.png" },
-  { id: 3, img: "/assets/hero/3.png" },
+  { id: 1, img: "/assets/Hero/1.png" },
+  { id: 2, img: "/assets/Hero/2.png" },
+  { id: 3, img: "/assets/Hero/3.png" },
 ];
 
 
