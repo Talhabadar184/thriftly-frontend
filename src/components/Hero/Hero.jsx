@@ -4,7 +4,6 @@ import Navbar from "../Navbar/Navbar";
 import Image1 from "../../assets/Hero/1.png";
 // import Image2 from "../../assets/Hero/2.png";
 import Image2 from "../../assets/Hero/2.png";
-
 import Image3 from "../../assets/hero/3.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
