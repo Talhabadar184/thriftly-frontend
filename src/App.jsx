@@ -24,7 +24,7 @@ function App() {
     AOS.init({
       offset: 100,
       duration: 800,  
-      easing: 'ease-in-sine',
+      easing: 'ease-in- sine',
       delay: 100,
     });
     AOS.refresh();
@@ -34,7 +34,7 @@ function App() {
    <BrowserRouter>
         <RouterRoutes>
           {/* Redirect the root path to the Landing Page initially */}
-          <Route path="/" element={<Navigate to="/Hero" replace />} />
+          {/* <Route path="/" element={<Navigate to="/Hero" replace />} /> */}
           <Route path="/Login" element={<Login />} />
           <Route path="/Forgotpassword" element={<Forgotpassword />} />
           <Route path="/Verifycode" element={<Verifycode />} />
